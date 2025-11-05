@@ -134,3 +134,8 @@ Este proyecto implementa un sistema de autenticación completo utilizando JWT (J
 #### Gestión de Categorías
 ![Gestión de Categorías](Screenshots/Admin/categoriesAdmin.png)
 *Interfaz de gestión de categorías con funcionalidades de búsqueda y acciones CRUD*
+
+#### Gestión de Productos
+![Gestión de Productos](Screenshots/Admin/ProductsAdmin.png)
+![Gestión de Productos](Screenshots/Admin/ProductsAdmin_02.png)
+*Interfaz de gestión de productos con funcionalidades de búsqueda y acciones CRUD*
