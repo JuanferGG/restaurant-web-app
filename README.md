@@ -121,6 +121,10 @@ Este proyecto implementa un sistema de autenticación completo utilizando JWT (J
 ![Página de Registro](Screenshots/register.png)
 *Formulario de registro con previsualización de imagen de perfil*
 
+### Pagina Principal
+![Página de Registro](Screenshots/HomePage.png)
+*Previsualización de la pagina principal del restaurante*
+
 ### Panel de Administración
 
 #### Navegación del Administrador
