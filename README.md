@@ -143,3 +143,11 @@ Este proyecto implementa un sistema de autenticación completo utilizando JWT (J
 ![Gestión de Productos](Screenshots/Admin/ProductsAdmin.png)
 ![Gestión de Productos](Screenshots/Admin/ProductsAdmin_02.png)
 *Interfaz de gestión de productos con funcionalidades de búsqueda y acciones CRUD*
+
+### Tomar Orden
+![Tomar orden](Screenshots/Caja/CartComponent.png)
+*Interfaz de caja para tomar pedidos del cliente*
+
+### Ver Ordenes
+![Ver Ordenes](Screenshots/Caja/OrderList.png)
+*Interfaz de caja para ver pedidos actuales*
