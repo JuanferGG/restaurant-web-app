@@ -153,5 +153,5 @@ Este proyecto implementa un sistema de autenticación completo utilizando JWT (J
 *Interfaz de caja para tomar pedidos del cliente*
 
 ### Ver Ordenes
-![Ver Ordenes](Screenshots/Caja/OrderList.png)
+![Ver Ordenes](Screenshots/Caja/OrderList02.png)
 *Interfaz de caja para ver pedidos actuales*
