@@ -131,11 +131,11 @@ Este proyecto implementa un sistema de autenticación completo utilizando JWT (J
 ![Navegación Admin](Screenshots/Admin/NavigationAdmin.png)
 *Barra de navegación del panel de administración con acceso a todas las funcionalidades*
 
-#### Gestión de Usuarios
+#### Gestión de Usuarios (admin)
 ![Gestión de Usuarios](Screenshots/Admin/usersAdmin.png)
 *Panel de administración de usuarios con tabla de datos y acciones de edición/eliminación*
 
-#### Gestión de Categorías
+#### Gestión de Categorías (admin)
 ![Gestión de Categorías](Screenshots/Admin/categoriesAdmin.png)
 *Interfaz de gestión de categorías con funcionalidades de búsqueda y acciones CRUD*
 
@@ -143,6 +143,10 @@ Este proyecto implementa un sistema de autenticación completo utilizando JWT (J
 ![Gestión de Productos](Screenshots/Admin/ProductsAdmin.png)
 ![Gestión de Productos](Screenshots/Admin/ProductsAdmin_02.png)
 *Interfaz de gestión de productos con funcionalidades de búsqueda y acciones CRUD*
+
+#### Reportes de ventas (admin)
+![Gestión de Productos](Screenshots/Admin/ReportsAdmin.png)
+*Interfaz de reportes de ventas con gráficos y datos de rendimiento*
 
 ## Tomar Orden
 ![Tomar orden](Screenshots/Caja/CartComponent.png)
