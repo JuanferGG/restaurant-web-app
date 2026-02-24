@@ -1,20 +1,25 @@
 # Restaurant Web app Code base
 
 ## Descripción
-Este proyecto implementa un sistema de autenticación completo utilizando JWT (JSON Web Tokens) con un backend en NestJS y un frontend en React. El sistema incluye registro de usuarios, inicio de sesión, y manejo de sesiones con tokens JWT, además de un panel de administración para la gestión de usuarios y categorías.
+Aplicación web para restaurante con backend en NestJS y frontend en React. Incluye autenticación JWT, gestión de usuarios y productos, toma y administración de órdenes, reportes con gráficos y tablas, filtros locales en cliente, refetch manual y exportación de reportes a Excel.
 
 ## Características Principales
 
+
 ### Backend (NestJS)
 - **Autenticación JWT**: Implementación segura de JSON Web Tokens para manejo de sesiones
+- **Seguridad**: Encriptación de contraseñas y protección de rutas
+- **Seguridad**: JWT, roles (admin, caja) y guards en endpoints
 - **Validación de Datos**: Uso de class-validator para validación de entrada
 - **Subida de Imágenes**: Soporte para subida de imágenes de perfil usando Multer
 - **Base de Datos MongoDB**: Almacenamiento de datos usando Mongoose
 - **Arquitectura Modular**: Estructura organizada siguiendo los principios de NestJS
-- **Seguridad**: Encriptación de contraseñas y protección de rutas
-- **API RESTful**: Endpoints bien estructurados para usuarios y categorías
+- **API RESTful**: Endpoints bien estructurados para usuarios, categorías, ordenes y reportes
 - **Middleware de Autenticación**: Verificación de tokens y roles de usuario
 - **Manejo de Archivos**: Sistema robusto para gestión de imágenes de perfil
+- **Módulos**: usuarios, productos, categorias y órdenes
+- **Órdenes**: creación, listado diario, por rango de fechas, actualización de estado, eliminación
+- **Reportes**: estadísticos por rango (byStatus, byOrderType, totalRevenue) y exportación a Excel con ExcelJS
 
 ### Frontend (React + Vite)
 - **Interfaz Moderna**: Diseño responsive usando Tailwind CSS
@@ -26,6 +31,11 @@ Este proyecto implementa un sistema de autenticación completo utilizando JWT (J
 - **Tablas de Datos**: Implementación de DataTables con funcionalidades de búsqueda y filtrado
 - **Modales Interactivos**: Sistema de modales para edición y eliminación de registros
 - **Navegación Intuitiva**: Menú de navegación adaptativo según el rol del usuario
+- **Reportes de Ventas**: página de admin con Recharts, @mui/x-data-grid y KPIs
+- **Filtros en Cliente**: fecha y estado aplicados localmente sobre data ya obtenida
+- **Refetch Manual**: botón “Buscar” para solicitar/actualizar data al backend
+- **Exportación a Excel**: botón “Exportar Excel” que descarga los reportes por rango
+- **Componentes Reutilizables**: DataTableReports para tablas basadas en MUI DataGrid
 
 ## Prácticas Implementadas
 - Arquitectura limpia y modular
@@ -61,30 +71,36 @@ Este proyecto implementa un sistema de autenticación completo utilizando JWT (J
   - React Query
   - Material-UI DataGrid
   - React Icons
+  - @tanstack/react-query
+  - @mui/x-data-grid
+  - Recharts
   - TypeScript
 
 ## Estructura del Proyecto
 ```plaintext
 ├── backend/
 │   ├── src/
-│   │   ├── user/           # Módulo de usuarios
-│   │   ├── categories/     # Módulo de categorías
-│   │   ├── auth/          # Módulo de autenticación
-│   │   ├── assets/        # Recursos compartidos
-│   │   └── config/        # Configuraciones
+│   │   ├── orders/        # Órdenes: service, controller, DTOs, esquema
+│   │   ├── products/      # Productos: CRUD y subida de imágenes
+│   │   ├── user/          # Usuarios
+│   │   ├── auth/          # Autenticación
+│   │   ├── categories/    # Categorías de productos
+│   │   ├── assets/        # Decorators, guards, interceptors
+│   │   └── config/        # Configuración
 │   └── uploads/           # Almacenamiento de imágenes
 └── frontend/
     ├── src/
-    │   ├── Api/           # Servicios de API
-    │   ├── assets/        # Recursos estáticos
-    │   ├── components/    # Componentes reutilizables
-    │   │   ├── DataTables/  # Tablas de datos
-    │   │   ├── Forms/       # Formularios
-    │   │   └── modals/      # Ventanas modales
-    │   ├── hooks/         # Hooks personalizados
-    │   ├── pages/         # Páginas de la aplicación
+    │   ├── Api/           # Servicios de API (orders/products/...)
+    │   ├── assets/        # Recursos estáticos (imágenes, estilos)
+    │   ├── components/    # Reutilizables (DataTables, modals, UI)
+    │   ├── hooks/         # React Query y hooks propios
+    │   ├── pages/
+    │   │   └── admin/
+    │   │       └── components/OrdersReport.tsx  # Reportes con gráficos/tabla/export
+    │   │   └── caja/
+    │   │   
     │   └── store/         # Estado global
-    └── public/            # Archivos públicos
+    └── public/
 ```
 
 ## Características de Seguridad
