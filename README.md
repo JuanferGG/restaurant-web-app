@@ -164,6 +164,10 @@ Aplicación web para restaurante con backend en NestJS y frontend en React. Incl
 ![Gestión de Productos](Screenshots/Admin/ReportsAdmin.png)
 *Interfaz de reportes de ventas con gráficos y datos de rendimiento*
 
+#### Dashboard admin
+![Reporte de ventas, ordenes y demas](Screenshots/Admin/DashboardAdmin.png)
+*Interfaz de reportes de ventas y ganancias diarias y mensual*
+
 ## Tomar Orden
 ![Tomar orden](Screenshots/Caja/CartComponent.png)
 ### Confirmar orden (Mesa)
