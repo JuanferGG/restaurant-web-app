@@ -179,3 +179,7 @@ Aplicación web para restaurante con backend en NestJS y frontend en React. Incl
 ### Ver Ordenes
 ![Ver Ordenes](Screenshots/Caja/OrderList02.png)
 *Interfaz de caja para ver pedidos actuales*
+
+### Editar orden
+![Editer Ordenes](Screenshots/Caja/EditOrder.png)
+*Modal para editar una orden*
